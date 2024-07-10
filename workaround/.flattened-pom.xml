@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>maven-flatten-plugin.bug</groupId>
+    <artifactId>parent</artifactId>
+    <version>HERE-WORKS</version>
+  </parent>
+  <artifactId>workaround</artifactId>
+  <version>HERE-WORKS</version>
+  <packaging>pom</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>maven-flatten-plugin.bug</groupId>
+        <artifactId>dependency-management</artifactId>
+        <version>${revision-workaround}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>maven-flatten-plugin.bug</groupId>
+      <artifactId>dependency</artifactId>
+      <version>${revision-workaround}</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</project>
